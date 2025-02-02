@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
+import { Input } from "@/components/ui/input";
+import { AppSidebar } from "@/components/app-sidebar";
+import { NavUser } from "@/components/nav-user";
+const data = {
+  user: {
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
+};
 
 export const metadata: Metadata = {
   title: "KuendaBooka",
@@ -12,8 +27,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">{children}</body>
+    <html lang="pt-ao">
+      <body className="antialiased">
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarInset>
+            <header className="flex h-16 shrink-0 pt-4 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+              <div className="flex items-center gap-2 px-4 justify-between w-full">
+                <SidebarTrigger className="-ml-1" />
+                <Input
+                  className="w-full lg:mx-52"
+                  placeholder="Oque desejas aprender?"
+                />
+                <div>
+                  <NavUser user={data.user} />
+                </div>
+              </div>
+            </header>
+            <div className="p-4">{children}</div>
+          </SidebarInset>
+        </SidebarProvider>
+      </body>
     </html>
   );
 }
