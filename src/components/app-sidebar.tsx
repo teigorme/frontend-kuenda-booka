@@ -2,11 +2,16 @@
 
 import * as React from "react";
 import {
+  Award,
+  Bell,
   BookOpen,
   Bot,
-  GalleryVerticalEnd,
- 
+  House,
+  MessageSquareText,
+  Play,
   SquareTerminal,
+  TvMinimalPlay,
+  UsersRound,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -25,13 +30,11 @@ const data = {
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-  teams: [
-    {
-      name: "kuendaBooka",
-      logo: BookOpen,
-      plan: "Enterprise",
-    },
-  ],
+  teams: {
+    name: "Kuenda👀",
+    logo: BookOpen,
+  },
+
   navMain: [
     {
       title: "Plataforma",
@@ -41,15 +44,18 @@ const data = {
       items: [
         {
           title: "Home",
-          url: "#",
+          url: "/",
+          icon: House,
         },
         {
           title: "Cursos",
           url: "#",
+          icon: TvMinimalPlay,
         },
         {
           title: "Subscrições",
           url: "#",
+          icon: UsersRound,
         },
       ],
     },
@@ -61,14 +67,22 @@ const data = {
         {
           title: "Minhas subscrições",
           url: "#",
+          icon: UsersRound,
+        },
+        {
+          title: "Minhas notificações",
+          url: "#",
+          icon: Bell,
         },
         {
           title: "Meus comentários",
           url: "#",
+          icon: MessageSquareText,
         },
         {
           title: "Meus certificados",
           url: "#",
+          icon: Award,
         },
       ],
     },
@@ -80,18 +94,22 @@ const data = {
         {
           title: "Introduction",
           url: "#",
+          icon: Play,
         },
         {
           title: "Get Started",
           url: "#",
+          icon: Play,
         },
         {
           title: "Tutorials",
           url: "#",
+          icon: Play,
         },
         {
           title: "Changelog",
           url: "#",
+          icon: Play,
         },
       ],
     },
