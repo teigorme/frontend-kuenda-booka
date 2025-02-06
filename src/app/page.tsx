@@ -1,95 +1,36 @@
-import Card from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
-const categories = [
-  "Desenvolvimento Web",
-  "Desenvolvimento Mobile",
-  "Ciência de Dados",
-  "Machine Learning e IA",
-  "DevOps e Cloud Computing",
-  "Cibersegurança",
-  "Bancos de Dados",
-  "Internet das Coisas (IoT)",
-  "Automação com Python",
-  "Marketing Digital",
-  "Gestão de Projetos",
-  "Finanças e Investimentos",
-  "Empreendedorismo",
-  "Estratégia e Planejamento",
-  "Gestão de Pessoas (RH)",
-  "E-commerce",
-  "Vendas",
-
-  "Design Gráfico",
-  "UX/UI Design",
-  "Edição de Vídeo",
-  "Animação e Motion Graphics",
-  "Fotografia",
-  "Design de Produtos",
-  "Modelagem 3D e Renderização",
-  "Produtividade",
-  "Liderança e Gestão de Equipes",
-  "Comunicação e Oratória",
-  "Educação Financeira",
-  "Inteligência Emocional",
-  "Técnicas de Estudo",
-  "Mindfulness e Meditação",
-  "Estatística",
-  "Matemática Aplicada",
-  "Física",
-  "Química",
-  "Biologia",
-  "Pesquisa e Métodos Científicos",
-  "Inglês",
-  "Espanhol",
-  "Francês",
-  "Alemão",
-  "Mandarim",
-  "Línguas para negócios",
-  "Preparação para exames de proficiência (TOEFL, IELTS)",
-  "Música (Teoria Musical, Instrumentos, Produção)",
-  "Escrita Criativa",
-  "Pintura e Desenho",
-  "Arte Digital",
-  "Escultura",
-  "Artesanato",
-  "Nutrição",
-  "Exercícios Físicos",
-  "Yoga e Pilates",
-  "Saúde Mental",
-  "Primeiros Socorros",
-  "Desenvolvimento Infantil",
-  "Terapias Alternativas",
-  "Didática e Metodologia de Ensino",
-  "Ensino de Crianças (Educação Infantil)",
-  "Ensino de Jovens e Adultos",
-  "Uso de Tecnologia na Educação",
-  "Formação para Professores",
-  "Direito e Legislação",
-  "Engenharia",
-  "Arquitetura",
-  "Medicina e Enfermagem",
-  "Agricultura e Meio Ambiente",
-  "Turismo e Hotelaria",
-];
-
-export default function Page() {
+export default function Home() {
   return (
-    <div >
-      <div className="py-2">
-        {categories.map((item, index) => (
-          <Badge key={index} className="ms-1">{item}</Badge>
-        ))}
-      </div>
-      <div className="grid grid-cols-1 gap-2 lg:grid-cols-4">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+    <div className="min-h-screen  flex flex-col items-center">
+      <header className="w-full  shadow-md py-4 px-6 flex justify-between items-center">
+        <h1 className="text-2xl font-bold ">Kuenda</h1>
+        <nav className="space-x-4">
+          <Link href="/home">Cursos</Link>
+        </nav>
+      </header>
 
+      <main className="flex-1 flex flex-col items-center justify-center text-center px-6">
+        <h2 className="text-4xl font-extrabold mb-4">
+          Aprenda com os melhores cursos online
+        </h2>
+        <p className="text-lg text-gray-600 mb-6 max-w-2xl">
+          Kuenda oferece cursos de alta qualidade para você desenvolver suas
+          habilidades e avançar na sua carreira.
+        </p>
+        <Link
+          href="/home"
+          className="bg-[#12c2e9] rounded-2xl text-white px-4 py-2   font-semibold  transition"
+        >
+          Explorar Cursos
+        </Link>
+      </main>
 
-        <Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card /><Card />
-      </div>
+      <footer className="w-full  py-4 text-center shadow-md">
+        <p className="text-[#12c2e9]">
+          &copy; 2025 Kuenda. Todos os direitos reservados.
+        </p>
+      </footer>
     </div>
   );
 }

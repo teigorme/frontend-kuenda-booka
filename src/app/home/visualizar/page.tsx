@@ -64,7 +64,7 @@ function Page() {
           <h2 className="font-semibold text-lg">
             Módulos - Lorem ipsum dolor...
           </h2>
-          <Separator />
+          <Separator className="mb-2" />
 
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">

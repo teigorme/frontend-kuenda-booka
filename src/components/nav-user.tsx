@@ -22,6 +22,7 @@ import {
   SidebarMenuButton,
   useSidebar,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
 
 export function NavUser({
   user,
@@ -76,7 +77,7 @@ export function NavUser({
         <DropdownMenuGroup>
           <DropdownMenuItem>
             <BadgeCheck />
-            Conta
+            <Link href="/home/conta">Conta</Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <CreditCard />

@@ -31,7 +31,7 @@ const data = {
     avatar: "/avatars/shadcn.jpg",
   },
   teams: {
-    name: "Kuenda👀",
+    name: "Kuenda🔥",
     logo: BookOpen,
   },
 
@@ -44,7 +44,7 @@ const data = {
       items: [
         {
           title: "Home",
-          url: "/",
+          url: "/home",
           icon: House,
         },
         {
